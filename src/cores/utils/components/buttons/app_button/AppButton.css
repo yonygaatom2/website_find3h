@@ -1,0 +1,12 @@
+.appButton {
+    width: 100%;
+    height: 48px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .appButton {
+        width: 460px;
+    }
+}

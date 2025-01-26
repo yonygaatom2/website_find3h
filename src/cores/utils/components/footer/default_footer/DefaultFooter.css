@@ -1,0 +1,15 @@
+.linksToOtherPage {
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.linksToOtherPage p {
+    font-size: 14px;
+    line-height: 1px;
+}
+
+.defaultFooter p {
+    font-size: 14px;
+    line-height: 1px;
+}

@@ -1,0 +1,6 @@
+.textButton{
+    cursor: pointer;
+    padding-block: 8px;
+    color: var(--secondary);
+    background-color: var(--light-background);
+}
