@@ -1,0 +1,50 @@
+html {
+    font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: var(--font-body);
+    background-color: var(--light-background);
+}
+
+h1 {
+    color: var(--primary);
+    font-size: var(--font-header);
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    color: var(--dark-grey);
+    font-size: var(--font-large);
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    color: var(--light);
+    font-size: var(--font-body);
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--primary);
+}
+
+/* To remove the autofill foreground color */
+input:-webkit-autofill {
+    border: none;
+    box-shadow: 0 0 0px 1000px white inset;
+}

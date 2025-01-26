@@ -1,0 +1,28 @@
+:root {
+    /* Main color of an app. */
+    --primary: #D2273C;
+    --secondary: #08796c;
+    --tertiary: #F5A878;
+
+    /* Helpers colors of an app. */
+    --info: #04a1f0;
+    --success: #0ABB56;
+    --warning: #FFD000;
+    --light: #ffffff;
+    --dark: #000000;
+    --grey: #D9D9D9;
+    --error: #C71A30;
+    --dark-grey: #545454;
+    --light-background: #F8F8F8;
+    --dark-background: #333333;
+
+    /*** Font Size ***/
+    /* 16px */
+    --font-body: 1rem;
+    /* 32px */
+    --font-header: 2rem;
+    /* 13px */
+    --font-small: 0.8125rem;
+    /* 20px */
+    --font-large: 1.25rem;
+}

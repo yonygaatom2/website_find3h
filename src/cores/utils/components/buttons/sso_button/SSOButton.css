@@ -1,0 +1,49 @@
+.ssoButtons {
+    width: 100%;
+    cursor: pointer;
+    padding-block: 8px;
+    color: var(--dark);
+    padding-inline: 16px;
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+}
+
+.ssoButtons p {
+    display: none;
+}
+
+@media (min-width: 416px) {
+    .ssoButtons {
+        gap: 8px;
+        width: 400px;
+        height: 48px;
+        display: flex;
+        padding-block: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ssoButtons p {
+        max-lines: 1;
+        display: flex;
+        font-size: var(--font-small);
+    }
+}
+
+@media (min-width: 768px) {
+    .ssoButtons {
+        gap: 8px;
+        width: 400px;
+        height: 48px;
+        display: flex;
+        padding-block: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ssoButtons p {
+        max-lines: 1;
+        display: flex;
+        font-size: var(--font-body);
+    }
+}
