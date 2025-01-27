@@ -1,6 +1,4 @@
 .signInScreen {
-    height: 100vh;
-    display: flex;
     display: flex;
     align-items: center;
     margin-inline: 16px;
@@ -48,10 +46,13 @@
     justify-content: center;
 }
 
+.signInOrTextBig {
+    display: none;
+}
+
 .signInOrSection p {
     font-size: 14px;
 }
-
 
 .signInOrLine {
     flex: 1;
@@ -99,6 +100,14 @@
     .signUpLink {
         width: 400px;
     }
+
+    .signInOrTextBig {
+        display: block;
+    }
+
+    .signInOrTextSmall {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -116,5 +125,13 @@
 
     .signUpLink {
         width: 460px;
+    }
+
+    .signInOrTextBig {
+        display: block;
+    }
+
+    .signInOrTextSmall {
+        display: none;
     }
 }
