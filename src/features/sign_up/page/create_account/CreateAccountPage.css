@@ -1,0 +1,15 @@
+.createAccountPage{
+    padding: 16px;
+    display: grid;
+    place-items: center;
+}
+
+.createAccountForm{
+    width: 100%;
+}
+
+@media (min-width: 414px){
+    .createAccountForm{
+        width: 460px;
+    }
+}

@@ -1,5 +1,5 @@
-export const validPassword = (password: string): string | null => {
-    if (password === '') {
+export const validPassword = (password: string | null | undefined): string | null => {
+    if (password === undefined || password === '' || password === null) {
         return 'Password field cannot be empty.';
     }
 

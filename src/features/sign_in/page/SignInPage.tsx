@@ -69,7 +69,7 @@ const SignInPage: React.FC = () => {
             password: password ?? '',
         }
         // signInEvent(signInData)
-        dispatch(SignInEvent(signInData))
+        await dispatch(SignInEvent(signInData))
     }
 
     // Handle email change.
@@ -85,7 +85,7 @@ const SignInPage: React.FC = () => {
     return (
         <div className='signInScreen' >
             <div className="signInContent">
-                <div style={{ height: '120px' }}></div>
+                <div style={{ height: '160px' }}></div>
                 <form className='signInForm'>
                     <h1 className='signInTitle'>Find3H</h1>
                     <p className='signInSubTitle'>Find Your <span>Happiness</span></p>
@@ -135,11 +135,12 @@ const SignInPage: React.FC = () => {
                     />
                 </div>
             </div>
-            <div style={{ height: '40px' }}></div>
-            <p className='signUpLink'>Don't have an account? <span onClick={(e) => {
+            <div style={{ height: '70px' }}></div>
+            <p className='signInLink'>Don't have an account? <span onClick={(e) => {
                 e.preventDefault()
                 navigator(RoutesPath.SIGN_UP)
             }}>Sign up</span> </p>
+            <div style={{ height: '14px' }}></div>
             <GetApp />
             <div style={{ height: '32px' }}></div>
             <DefaultFooter />

@@ -16,12 +16,12 @@
 }
 
 .signUpTitle {
-    line-height: 1px;
+    margin: 0;
+    line-height: 2px;
     text-align: center;
 }
 
 .signUpSubTitle {
-    line-height: 1px;
     text-align: center;
     font-size: var(--font-body);
 }
@@ -48,6 +48,16 @@
     height: 1px;
     background-color: var(--grey);
 }
+
+.signUpLink {
+    font-size: 16px;
+}
+
+.signUpLink span {
+    cursor: pointer;
+    color: var(--primary);
+}
+
 
 .signUpSSOButtons {
     gap: 8px;

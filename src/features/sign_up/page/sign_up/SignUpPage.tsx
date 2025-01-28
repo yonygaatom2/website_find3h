@@ -4,10 +4,13 @@ import { FcGoogle } from 'react-icons/fc'
 import { AiFillApple } from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import GetApp from '../../../cores/utils/components/get_app/GetApp'
-import SSOButton from '../../../cores/utils/components/buttons/sso_button/SSOButton'
-import AppButton from '../../../cores/utils/components/buttons/app_button/AppButton'
-import DefaultFooter from '../../../cores/utils/components/footer/default_footer/DefaultFooter'
+import { HiOutlineMail } from "react-icons/hi";
+import { RoutesPath } from '../../../../config/routes/RoutesPath'
+import GetApp from '../../../../cores/utils/components/get_app/GetApp'
+import AppButton from '../../../../cores/utils/components/buttons/app_button/AppButton'
+import SSOButton from '../../../../cores/utils/components/buttons/sso_button/SSOButton'
+import DefaultFooter from '../../../../cores/utils/components/footer/default_footer/DefaultFooter'
+import TermsAndPrivacy from '../../../../cores/utils/components/buttons/terms_and_privacy/TermsAndPrivacy'
 
 const SignUpPage: React.FC = () => {
   const navigator = useNavigate()
@@ -18,8 +21,15 @@ const SignUpPage: React.FC = () => {
         <div style={{ height: '160px' }}></div>
         <h1 className='signUpTitle'>Find3H</h1>
         <p className='signUpSubTitle'>Find Your <span>Happiness</span></p>
-        <div style={{ height: '24px' }}></div>
-        <AppButton onClick={() => { }} isLoading={false} label='Sign Up With Find3H' />
+        <div style={{ height: '48px' }}></div>
+        <AppButton
+          onClick={() => {
+            navigator(RoutesPath.CREATE_ACCOUNT)
+          }}
+          isLoading={false}
+          label='Sign Up With Email'
+          leadingIcon={<HiOutlineMail style={{ height: "32px", width: "32px" }} />}
+        />
         <div className="signUpOrSection">
           <div className="signUpOrLeft signUpOrLine"></div>
           <p className="signUpOrText">or sign up with</p>
@@ -28,18 +38,20 @@ const SignUpPage: React.FC = () => {
         <div className="signUpSSOButtons">
           <SSOButton
             onClick={() => { }}
-            icon={<FcGoogle style={{ height: "32px", width: "32px" }} />}
             label='Sign up with Google'
+            icon={<FcGoogle style={{ height: "32px", width: "32px" }} />}
           />
           <br />
           <SSOButton
             onClick={() => { }}
-            icon={<AiFillApple style={{ height: "32px", width: "32px" }} />}
             label='Sign up with Apple'
+            icon={<AiFillApple style={{ height: "32px", width: "32px" }} />}
           />
         </div>
       </div>
-      <div style={{ height: '160px' }}></div>
+      <div style={{ height: '70px' }}></div>
+      <TermsAndPrivacy />
+      <div style={{ height: '80px' }}></div>
       <p className='signUpLink'>Already have an account? <span onClick={(e) => {
         e.preventDefault()
         navigator(-1)
