@@ -5,5 +5,8 @@ export enum StateStatus{
     submitInProgress,
     submitFailed,
     submitSuccess,
+    signUpInProgress,
+    signUpFailed,
+    signUpSuccess,
     unknown,
 }

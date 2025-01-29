@@ -1,16 +1,18 @@
 import './SignInPage.css'
-import React, { useState } from 'react'
-import { AppState } from '../../../Store'
-import { useSelector } from 'react-redux'
 import { FcGoogle } from "react-icons/fc"
 import { AiFillApple } from "react-icons/ai"
 import { useNavigate } from 'react-router-dom'
 import "react-toastify/dist/ReactToastify.css"
 import { SignInState } from '../slice/SignInState'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { AppDispatch, AppState } from '../../../Store'
 import { ToastContainer, toast } from "react-toastify"
 import { RoutesPath } from '../../../config/routes/RoutesPath'
 import { SignInModel } from '../../../cores/models/SignInModel'
-import { SignInEvent as signInEvent } from '../slice/SignInSlice'
+import GetApp from '../../../cores/utils/components/get_app/GetApp'
+import { AuthState } from '../../../cores/providers/auth/AuthState'
+import { SignInEvent } from '../../../cores/providers/auth/AuthSlice'
 import { StateStatus } from '../../../cores/utils/enums/StateStatus'
 import { validEmail } from '../../../cores/utils/helpers/validators/ValidEmail'
 import SSOButton from '../../../cores/utils/components/buttons/sso_button/SSOButton'
@@ -23,7 +25,9 @@ import PasswordInputfield from '../../../cores/utils/components/inputfields/pass
 
 const SignInPage: React.FC = () => {
     const navigator = useNavigate()
+    const dispatch = useDispatch<AppDispatch>()
     const state: SignInState = useSelector((state: AppState) => state.signIn)
+    const authState: AuthState = useSelector((state: AppState) => state.auth)
     const isLoading: boolean = state.status == StateStatus.submitInProgress
 
     // Handle Input Value
@@ -34,8 +38,14 @@ const SignInPage: React.FC = () => {
     const [emailError, setEmailError] = useState<string | null>(null)
     const [passwordError, setPasswordError] = useState<string | null>(null)
 
+    useEffect(() => {
+        if (authState.isLoggedIn) {
+            navigator(RoutesPath.HOME)
+        }
+    }, [authState])
+
     // Submit User Data
-    const submitData: React.ReactEventHandler<HTMLButtonElement> = (e) => {
+    const submitData: React.ReactEventHandler<HTMLButtonElement> = async (e) => {
         e.preventDefault()
         const hasEmailError: string | null = validEmail(email ?? '')
         const hasPasswordError: string | null = validPassword(password ?? '')
@@ -51,14 +61,15 @@ const SignInPage: React.FC = () => {
 
         const hasSnackBarError: string | null = passwordHasValidPattern(password ?? '')
         if (hasSnackBarError !== null) {
-            toast.error(hasSnackBarError, { autoClose: 4000 , position: 'bottom-right'})
+            toast.error(hasSnackBarError, { autoClose: 4000, position: 'bottom-right' })
             return;
         }
         const signInData: SignInModel = {
             email: email ?? '',
             password: password ?? '',
         }
-        signInEvent(signInData)
+        // signInEvent(signInData)
+        await dispatch(SignInEvent(signInData))
     }
 
     // Handle email change.
@@ -74,6 +85,7 @@ const SignInPage: React.FC = () => {
     return (
         <div className='signInScreen' >
             <div className="signInContent">
+                <div style={{ height: '160px' }}></div>
                 <form className='signInForm'>
                     <h1 className='signInTitle'>Find3H</h1>
                     <p className='signInSubTitle'>Find Your <span>Happiness</span></p>
@@ -101,25 +113,35 @@ const SignInPage: React.FC = () => {
                 </form>
                 <div className="signInOrSection">
                     <div className="signInOrLeft signInOrLine"></div>
-                    <p className="signInOrText">or</p>
+                    <p className="signInOrText signInOrTextBig">or</p>
+                    <p className="signInOrText signInOrTextSmall">or sign in with</p>
                     <div className="signInOrLeft signInOrLine"></div>
                 </div>
                 <div className="signInSSOButtons">
                     <SSOButton
+                        onClick={(e) => {
+                            e.preventDefault()
+                        }}
                         icon={<FcGoogle style={{ height: "32px", width: "32px" }} />}
                         label='Sign in with Google'
                     />
                     <br />
                     <SSOButton
+                        onClick={(e) => {
+                            e.preventDefault()
+                        }}
                         icon={<AiFillApple style={{ height: "32px", width: "32px" }} />}
                         label='Sign in with Apple'
                     />
                 </div>
             </div>
-            <p className='signUpLink'>Don't have an account? <span onClick={(e) => {
+            <div style={{ height: '70px' }}></div>
+            <p className='signInLink'>Don't have an account? <span onClick={(e) => {
                 e.preventDefault()
                 navigator(RoutesPath.SIGN_UP)
             }}>Sign up</span> </p>
+            <div style={{ height: '14px' }}></div>
+            <GetApp />
             <div style={{ height: '32px' }}></div>
             <DefaultFooter />
             <ToastContainer />

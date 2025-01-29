@@ -5,12 +5,16 @@ import { CircularProgress } from '@mui/material'
 interface AppButtonProps {
     label: string,
     isLoading: boolean,
+    leadingIcon?: React.ReactElement,
     onClick: React.ReactEventHandler<HTMLButtonElement>
 }
 
 const AppButton: React.FC<AppButtonProps> = (props) => {
     return (
         <button onClick={props.onClick} className='appButton'>
+            {props.leadingIcon !== null ? <div className='leadingIcon'>
+                {props.leadingIcon}
+            </div> : null}
             {
                 props.isLoading ?
                     <CircularProgress

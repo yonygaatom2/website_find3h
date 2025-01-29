@@ -1,0 +1,32 @@
+.getTheApp {
+    display: grid;
+    place-items: center;
+}
+
+.getTheApp p {
+    color: var(--dark);
+}
+
+.storeButtons {
+    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.storeButton {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 48px;
+    cursor: pointer;
+}
+
+.storeImage {
+    height: 48px;
+}
+
+@media (min-width: 416px){
+    .storeButtons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

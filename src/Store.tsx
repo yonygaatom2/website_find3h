@@ -1,11 +1,13 @@
+import { configureStore } from '@reduxjs/toolkit';
 import AuthSlice from './cores/providers/auth/AuthSlice';
 import SignInSlice from './features/sign_in/slice/SignInSlice';
-import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
+import SignUpSlice from './features/sign_up/slice/SignUpSlice';
 
-const store: EnhancedStore = configureStore({
+const store = configureStore({
     reducer: {
-        signIn: SignInSlice,
         auth: AuthSlice,
+        signUp: SignUpSlice,
+        signIn: SignInSlice,
     }
 })
 

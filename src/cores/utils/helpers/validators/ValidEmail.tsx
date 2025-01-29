@@ -1,5 +1,5 @@
-export const validEmail = (email: string): string | null => {
-    if (email === '') {
+export const validEmail = (email: string | null | undefined): string | null => {
+    if (email === '' || email === null || email === undefined) {
         return 'Email field cannot be empty.';
     }
 

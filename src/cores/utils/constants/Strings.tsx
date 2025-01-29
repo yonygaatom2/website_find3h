@@ -1,0 +1,1 @@
+export const SIGN_UP_SUCCESS = 'Welcome to Find3H. Successfully Sign-Up.'

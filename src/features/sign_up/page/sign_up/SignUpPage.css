@@ -1,4 +1,4 @@
-.signInScreen {
+.signUpScreen {
     display: flex;
     align-items: center;
     margin-inline: 16px;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.signInContent {
+.signUpContent {
     flex: 1;
     width: 100%;
     display: flex;
@@ -15,31 +15,22 @@
     justify-content: center;
 }
 
-.signInTitle {
-    margin: 0px;
+.signUpTitle {
+    margin: 0;
     line-height: 2px;
     text-align: center;
 }
 
-.signInSubTitle {
+.signUpSubTitle {
     text-align: center;
     font-size: var(--font-body);
 }
 
-.signInSubTitle span {
+.signUpSubTitle span {
     color: var(--primary);
 }
 
-.signInForm {
-    width: 100%;
-}
-
-.forgetPasswordButton {
-    display: flex;
-    justify-content: right;
-}
-
-.signInOrSection {
+.signUpOrSection {
     gap: 16px;
     width: 100%;
     display: flex;
@@ -47,90 +38,56 @@
     justify-content: center;
 }
 
-.signInOrTextBig {
-    display: none;
-}
-
-.signInOrSection p {
+.signUpOrSection p {
     font-size: 14px;
 }
 
-.signInOrLine {
+
+.signUpOrLine {
     flex: 1;
     height: 1px;
     background-color: var(--grey);
 }
 
 .signUpLink {
-    gap: 8px;
-    width: 100%;
-    text-align: center;
-    padding-block: 16px;
-    margin-inline: 16px;
-}
-
-.signInLink {
     font-size: 16px;
 }
 
-.signInLink span {
+.signUpLink span {
     cursor: pointer;
     color: var(--primary);
 }
 
-.signInSSOButtons {
+
+.signUpSSOButtons {
     gap: 8px;
     display: flex;
 }
 
 @media (min-width: 416px) {
-    .signInForm {
+    .signUpSection {
         width: 400px;
     }
 
-    .signInSSOButtons {
+    .signUpContent {
         width: 400px;
     }
 
-    .signInOrSection {
+    .signUpSSOButtons {
         width: 400px;
-    }
-
-    .signUpLink {
-        width: 400px;
-    }
-
-    .signInOrTextBig {
-        display: block;
-    }
-
-    .signInOrTextSmall {
-        display: none;
     }
 }
 
 @media (min-width: 768px) {
-    .signInForm {
+    .signUpSection {
         width: 460px;
     }
 
-    .signInSSOButtons {
+    .signUpContent {
         width: 460px;
     }
 
-    .signInOrSection {
+    .signUpSSOButtons {
         width: 460px;
-    }
-
-    .signUpLink {
-        width: 460px;
-    }
-
-    .signInOrTextBig {
-        display: block;
-    }
-
-    .signInOrTextSmall {
-        display: none;
     }
 }

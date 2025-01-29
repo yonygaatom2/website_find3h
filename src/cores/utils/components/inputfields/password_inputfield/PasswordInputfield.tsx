@@ -5,6 +5,7 @@ import { HiOutlineEyeOff, HiOutlineEye } from "react-icons/hi";
 export interface PasswordInputfieldProps {
   value?: string | null,
   errorMessage?: string | null,
+  autoComplete?: string | null,
   onChanged?: React.ChangeEventHandler<HTMLInputElement>,
 }
 
@@ -13,7 +14,7 @@ const PasswordInputfield: React.FC<PasswordInputfieldProps> = (props) => {
 
   return (
     <Inputfield
-      autoComplete='on'
+      autoComplete={props.autoComplete ?? 'on'}
       value={props.value}
       placeholder="Password"
       onChanged={props.onChanged}
