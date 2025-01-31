@@ -1,0 +1,11 @@
+.dashboardContent{
+    width: 100%;
+}
+
+@media (min-width: 600px){
+    .dashboardContent{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}

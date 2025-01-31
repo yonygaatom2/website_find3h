@@ -1,0 +1,56 @@
+.appIconButton {
+    margin: 0;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    background-color: var(--primary);
+}
+
+.appIconButton:hover {
+    background-color: var(--tertiary);
+}
+
+.iconButtonLabel {
+    display: none;
+}
+
+.selectedIconButtonLabel{
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .appIconButton {
+        gap: 8px;
+        width: 100%;
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+    }
+
+    .iconButtonLabel {
+        display: block;
+        opacity: 0.6;
+        color: var(--light);
+        font-size: var(--font-small);
+    }
+
+    .selectedIconButtonLabel {
+        display: block;
+        color: var(--light);
+        font-size: var(--font-small);
+    }
+
+    .firstIconButton {
+        gap: 8px;
+        width: 100%;
+        padding: 16px;
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+        border-top-right-radius: 16px;
+    }
+
+    .firstIconButton:hover {
+        background-color: var(--tertiary);
+    }
+}

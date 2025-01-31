@@ -1,0 +1,16 @@
+.couplePage {
+    width: 100%;
+    height: 100vh;
+}
+
+@media (min-width: 600px) {
+    .couplePage {
+        margin-left: 60px;
+    }
+}
+
+@media (min-width: 1024px){
+    .couplePage {
+        margin-left: 200px;
+    }
+}
