@@ -83,7 +83,7 @@
     display: flex;
 }
 
-@media (min-width: 416px) {
+@media (min-width: 600px) {
     .signInForm {
         width: 400px;
     }

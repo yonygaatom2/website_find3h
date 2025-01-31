@@ -40,7 +40,7 @@ const SignInPage: React.FC = () => {
 
     useEffect(() => {
         if (authState.isLoggedIn) {
-            navigator(RoutesPath.HOME)
+            navigator(RoutesPath.DASHBOARD)
         }
     }, [authState])
 
