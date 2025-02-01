@@ -1,0 +1,45 @@
+.notificationSettingPage {
+    display: flex;
+    align-items: center;
+    padding-inline: 16px;
+    flex-direction: column;
+    background-color: var(--light-background);
+}
+
+.notificationSettingPage h1 {
+    margin: 0px;
+    margin-top: 32px;
+    color: var(--secondary);
+}
+
+.appSwitchOn,
+.appSwitchOff {
+    padding: 1px;
+    display: flex;
+    border-radius: 30px;
+    background-color: var(--light);
+}
+
+.appSwitchOn{
+    border: 1.4px solid var(--success);
+}
+
+.appSwitchOff{
+    border: 1.4px solid var(--grey);
+}
+
+.switchOff {
+    width: 26px;
+    height: 26px;
+    margin-right: 26px;
+    border-radius: 30px;
+    background-color: var(--grey);
+}
+
+.switchOn {
+    width: 26px;
+    height: 26px;
+    margin-left: 26px;
+    border-radius: 30px;
+    background-color: var(--success);
+}

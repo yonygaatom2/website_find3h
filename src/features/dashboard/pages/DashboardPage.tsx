@@ -4,11 +4,11 @@ import HomePage from '../../home/HomePage'
 import CouplePage from '../../couple/CouplePage'
 import { AppDispatch, AppState } from '../../../Store'
 import { useDispatch, useSelector } from 'react-redux'
-import ProfilePage from '../../profile/page/ProfilePage'
 import NavigationSheet from './components/NavigationSheet'
 import { initializeDashboard } from '../slice/DashboardSlice'
+import ProfilePage from '../../profile/page/profile/ProfilePage'
 import { StateStatus } from '../../../cores/utils/enums/StateStatus'
-import NotificationPage from '../../notification/page/NotificationPage'
+import NotificationPage from '../../notification/page/notification/NotificationPage'
 
 const DashboardPage: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>()
@@ -22,7 +22,10 @@ const DashboardPage: React.FC = () => {
   ]
 
   useEffect(() => {
+    const controller = new AbortController()
     dispatch(initializeDashboard())
+
+    return () => controller.abort()
   }, [])
 
   if (state.status === StateStatus.initializeInProgress){

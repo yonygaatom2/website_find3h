@@ -1,0 +1,38 @@
+.profileImage{
+    margin: 0;
+    padding: 0;
+}
+
+.profileImagePlaceholderWrapper{
+    width: 120px;
+    height: 120px;
+    padding: 2px;
+    border-radius: 120px;
+    background-color: var(--primary);
+}
+
+.profileImagePlaceHolder {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    border-radius: 120px;
+    justify-content: center;
+    text-transform: lowercase;
+    background-color: var(--success);
+}
+
+.profilePlaceholderName{
+    color: var(--light);
+}
+
+
+.coupleRelationStatus{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--secondary);
+    justify-content: center;
+}

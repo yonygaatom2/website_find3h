@@ -1,0 +1,31 @@
+.coupleDetailCard {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    border-radius: 8px;
+    background-color: var(--primary);
+}
+
+.profileCardDetailLabel{
+    margin: 0;
+    padding: 0;
+}
+
+
+.profileCardDetailTitle {
+    opacity: 0.8;
+    line-height: 1px;
+    padding-bottom: 4px;
+    color: var(--light);
+    padding-inline: 16px;
+    text-transform: capitalize;
+    font-size: var(--font-small);
+}
+
+.profileCardDetailValue {
+    line-height: 1px;
+    color: var(--light);
+    padding-inline: 16px;
+    text-overflow: ellipsis;
+    font-size: var(--font-small);
+}

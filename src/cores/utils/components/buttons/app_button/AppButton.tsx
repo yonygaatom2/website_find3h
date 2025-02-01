@@ -6,12 +6,13 @@ interface AppButtonProps {
     label: string,
     isLoading: boolean,
     leadingIcon?: React.ReactElement,
+    isCircularButton?: boolean | null | undefined,
     onClick: React.ReactEventHandler<HTMLButtonElement>
 }
 
 const AppButton: React.FC<AppButtonProps> = (props) => {
     return (
-        <button onClick={props.onClick} className='appButton'>
+        <button onClick={props.onClick} className={props.isCircularButton ? 'circularAppButton' : 'appButton'}>
             {props.leadingIcon !== null ? <div className='leadingIcon'>
                 {props.leadingIcon}
             </div> : null}

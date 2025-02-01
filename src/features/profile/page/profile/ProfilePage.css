@@ -1,0 +1,47 @@
+.profilePage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profilePageImage {
+    align-self: center;
+}
+
+.profilePage p {
+    line-height: 1px;
+    align-self: center;
+}
+
+.settings {
+    margin: 0;
+    padding: 0;
+    padding-inline: 32px;
+}
+
+.settings p {
+    font-size: 16px;
+}
+
+.helpAndSupport {
+    margin: 0;
+    padding: 0;
+    padding-inline: 32px;
+}
+
+.helpAndSupport p {
+    font-size: 16px;
+}
+
+@media (min-width: 600px) {
+    .settings {
+        width: 460px;
+        align-self: center;
+    }
+
+    .helpAndSupport {
+        width: 460px;
+        align-self: center;
+    }
+}

@@ -1,11 +1,14 @@
-.dashboardContent{
-    width: 100%;
+.dashboardLogo{
+    margin-inline: 16px;
 }
 
 @media (min-width: 600px){
     .dashboardContent{
         width: 100%;
         display: flex;
-        flex-direction: column;
+    }
+
+    .dashboardChild{
+        flex: 1;
     }
 }

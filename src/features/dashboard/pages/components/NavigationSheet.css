@@ -1,26 +1,26 @@
 .navigationSheet {
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
     display: flex;
     position: fixed;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    margin-inline: 16px;
     justify-content: space-around;
     background-color: var(--primary);
 }
 
 @media (min-width: 600px) {
     .navigationSheet {
-        width: 60px;
+        margin: 0;
+        padding: 0;
+        left: auto;
+        right: auto;
         bottom: auto;
         height: 100vh;
-        display: block;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
-    }
-}
-
-
-@media (min-width: 1024px) {
-    .navigationSheet {
-        width: 200px;
+        position: static;
+        flex-direction: column;
+        justify-content: start;
     }
 }

@@ -1,5 +1,6 @@
 .homePage {
     display: flex;
+    margin-top: 160px;
     align-items: center;
     justify-content: center;
 }
@@ -9,26 +10,12 @@
     height: 32px;
     padding: 16px;
     cursor: pointer;
-    margin-top: 160px;
     color: var(--light);
-    border-radius: 40px;
+    border-radius: 80px;
     background-color: var(--primary);
 }
 
 .searchUserIcon:hover {
     opacity: 0.8;
     background-color: light;
-}
-
-@media (min-width: 600px) {
-    .homePage {
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1024px) {
-    .homePage {
-        margin-left: 200px;
-    }
 }

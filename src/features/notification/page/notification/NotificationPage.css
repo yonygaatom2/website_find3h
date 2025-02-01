@@ -1,0 +1,49 @@
+.notificationPage {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.notificationPageBell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    justify-content: center;
+    background-color: var(--secondary);
+}
+
+.notficationPageBellIcon {
+    width: 24px;
+    height: 24px;
+    color: var(--light);
+    transform: rotate(40deg);
+}
+
+.noNotificationToShow{
+    margin: 0;
+    margin-top: 32px;
+    color: var(--dark-grey);
+}
+
+.noNotificationSentence{
+    margin: 0;
+    margin-top: 8px;
+    text-align: center;
+    margin-inline: 64px;
+    font-size: var(--font-small);
+}
+
+.manageSettingButton{
+    margin-top: 16px;
+    padding-inline: 32px;
+}
+
+@media (min-width: 600px) {
+    .noNotificationSentence {
+        width: 300px;
+    }
+}

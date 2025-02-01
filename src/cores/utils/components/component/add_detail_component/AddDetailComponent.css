@@ -1,0 +1,50 @@
+.addDetailComponent {
+    bottom: 100px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 16px;
+    padding-block: 16px;
+    margin-inline: 32px;
+    padding-inline: 32px;
+    border: 2px solid var(--grey);
+    background-color: var(--secondary);
+}
+
+.addDetailComponent:hover {
+    opacity: 0.8;
+}
+
+.addDetailTitle {
+    margin: 0;
+    color: var(--light-grey);
+}
+
+.addDetailSubTitle {
+    margin: 0;
+    opacity: 0.8;
+    max-lines: 4;
+    color: var(--grey);
+    margin-block: 8px;
+    font-size: var(--font-small);
+}
+
+.addSearchDetail {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    border-radius: 100px;
+    background-color: var(--info);
+}
+
+.addSearchDetailLabel{
+    margin: 0;
+    font-size: 14px;
+    color: var(--light);
+}
+
+@media (min-width: 416px) {
+    .addDetailComponent {
+        width: 300px;
+    }
+}
