@@ -1,3 +1,19 @@
+@import "tailwindcss";
+
+@theme{
+    /* Main color of an app. */
+    --color-primary-500: #D2273C;
+    --color-secondary-500: #08796c;
+    --color-tertiary-500: #F5A878;
+
+    /* Helpers colors of an app. */
+    --color-light-500: #ffffff;
+    --color-grey-500: #9AA0A6;
+
+    /* Font Families */
+    --font-appHeader: 'Playfair Display', serif;
+}
+
 html {
     font-size: 16px;
 }
@@ -27,13 +43,6 @@ h1 {
     font-size: var(--font-header);
     font-family: 'Playfair Display', serif;
 }
-
-p {
-    color: var(--dark-grey);
-    font-size: var(--font-large);
-    font-family: 'Roboto', sans-serif;
-}
-
 button {
     border: none;
     border-radius: 8px;

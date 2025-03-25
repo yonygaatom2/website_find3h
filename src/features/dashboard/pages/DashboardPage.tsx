@@ -23,16 +23,20 @@ const DashboardPage: React.FC = () => {
 
   useEffect(() => {
     const controller = new AbortController()
-    dispatch(initializeDashboard())
+    if (state.profile === null){
+      dispatch(initializeDashboard())
+    }
 
     return () => controller.abort()
-  }, [])
+  }, [state])
 
-  if (state.status === StateStatus.initializeInProgress){
-    return <>No Data</>
-  }
 
-  if (state.profile === null){
+
+  // if (state.status !== StateStatus.initializeSuccess) {
+  //   return <>No Data</>
+  // }
+
+  if (state.profile === null) {
     return <>No Profile</>
   }
 

@@ -1,4 +1,4 @@
-export interface SignInModel{
+export interface SignInWithEmailModel{
     email: string,
     password: string,
 }

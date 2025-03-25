@@ -26,7 +26,7 @@ const Bottomsheet: React.FC<BottomsheetProps> = (props) => {
     }
 
     return (
-        <section className="bottomsheet">
+        <section>
             <div onClick={props.closeBottomsheet} className="bottomsheetCloseWrapper"></div>
             <div className="bottomsheetWrapper">
                 <div className="bottomsheetAppBar">

@@ -1,7 +1,8 @@
 import './HomePage.css'
 import React, { useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
-import Bottomsheet from '../../cores/utils/modals/bottomsheet/bottomsheet'
+import SearchForms from './components/SearchForms'
+import Bottomsheet from '../../cores/utils/modals/bottomsheet/Bottomsheet'
 
 
 const HomePage: React.FC = () => {
@@ -14,7 +15,15 @@ const HomePage: React.FC = () => {
                     e.preventDefault()
                     setShowBottomsheet(true)
                 }}
-                className='searchUserIcon'
+                className="
+                    p-4
+                    h-[60px]
+                    w-[60px]
+                    rounded-[30px]
+                    cursor-pointer
+                    text-light-500
+                    bg-primary-500
+                "
             />
             <Bottomsheet
                 showBottomsheet={showBottomsheet}
@@ -22,9 +31,7 @@ const HomePage: React.FC = () => {
                     e.preventDefault()
                     setShowBottomsheet(false)
                 }}
-                child={<>
-                    Atom
-                </>}
+                child={<SearchForms />}
             />
         </section>
     )
