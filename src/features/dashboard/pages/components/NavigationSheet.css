@@ -1,0 +1,26 @@
+.navigationSheet {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    margin-inline: 16px;
+    justify-content: space-around;
+    background-color: var(--primary);
+}
+
+@media (min-width: 600px) {
+    .navigationSheet {
+        margin: 0;
+        padding: 0;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        height: 100vh;
+        position: static;
+        flex-direction: column;
+        justify-content: start;
+    }
+}

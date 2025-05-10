@@ -8,7 +8,7 @@
     width: 100%;
 }
 
-@media (min-width: 414px){
+@media (min-width: 600px){
     .createAccountForm{
         width: 460px;
     }

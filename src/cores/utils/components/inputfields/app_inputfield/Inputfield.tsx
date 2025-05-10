@@ -1,5 +1,5 @@
 import './Inputfield.css'
-import React from 'react'
+import React, { useState } from 'react'
 import { ValidString } from '../../../helpers/validators/ValidString'
 
 interface InputfieldProps {
@@ -17,7 +17,14 @@ interface InputfieldProps {
 
 const Inputfield: React.FC<InputfieldProps> = (props) => {
     const hasError: boolean = ValidString(props.errorMessage)
-    const value: string = props.value ?? ''
+    const [value, setValue] = useState(props.value)
+
+    const onChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (props.onChanged != null && props.onChanged != undefined) {
+            setValue(e.target.value)
+            props.onChanged(e)
+        }
+    }
 
     return (
         <>
@@ -30,12 +37,12 @@ const Inputfield: React.FC<InputfieldProps> = (props) => {
                         : <div style={{ width: '16px' }}></div>
                 }
                 <input
-                    value={value}
+                    value={value ?? ''}
                     autoComplete={props.autoComplete ?? 'off'}
                     className='inputfield'
                     type={props.type ?? 'text'}
                     placeholder={props.placeholder}
-                    onChange={props.onChanged}
+                    onChange={onChanged}
                 />
                 {
                     props.trailing != null

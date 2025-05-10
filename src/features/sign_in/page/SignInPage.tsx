@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppDispatch, AppState } from '../../../Store'
 import { ToastContainer, toast } from "react-toastify"
 import { RoutesPath } from '../../../config/routes/RoutesPath'
-import { SignInModel } from '../../../cores/models/SignInModel'
+import { SignInWithEmailModel } from '../../../cores/models/SignInModel'
 import GetApp from '../../../cores/utils/components/get_app/GetApp'
 import { AuthState } from '../../../cores/providers/auth/AuthState'
 import { SignInEvent } from '../../../cores/providers/auth/AuthSlice'
@@ -40,7 +40,7 @@ const SignInPage: React.FC = () => {
 
     useEffect(() => {
         if (authState.isLoggedIn) {
-            navigator(RoutesPath.HOME)
+            navigator(RoutesPath.DASHBOARD)
         }
     }, [authState])
 
@@ -64,7 +64,7 @@ const SignInPage: React.FC = () => {
             toast.error(hasSnackBarError, { autoClose: 4000, position: 'bottom-right' })
             return;
         }
-        const signInData: SignInModel = {
+        const signInData: SignInWithEmailModel = {
             email: email ?? '',
             password: password ?? '',
         }

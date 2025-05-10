@@ -1,0 +1,49 @@
+.groupDropdownButtonParent,
+.groupDropdownButtonParentFirst,
+.groupDropdownButtonParentLast {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--light);
+}
+
+.groupDropdownButtonParent:hover,
+.groupDropdownButtonParentFirst:hover,
+.groupDropdownButtonParentLast:hover {
+    opacity: 0.6;
+}
+
+.groupDropdownButtonParentFirst {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+}
+
+.groupDropdownButtonParentLast {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.groupDropdownButtonChildren {
+    background-color: var(--primary);
+}
+
+.groupDropdownButtonRight{
+    display: flex;
+    align-items: center;
+}
+
+.groupLeadingIcon{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.groupTrailingIcon{
+    width: 24px;
+    color: var(--light);
+}

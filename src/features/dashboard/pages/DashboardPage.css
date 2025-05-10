@@ -1,0 +1,14 @@
+.dashboardLogo{
+    margin-inline: 16px;
+}
+
+@media (min-width: 600px){
+    .dashboardContent{
+        width: 100%;
+        display: flex;
+    }
+
+    .dashboardChild{
+        flex: 1;
+    }
+}
